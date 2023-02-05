@@ -1,0 +1,12 @@
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.csproj.AssemblyReference.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.AssemblyInfoInputs.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.AssemblyInfo.cs
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\bin\Debug\net6.0\Mechanic.DDD.Domain.deps.json
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\bin\Debug\net6.0\Mechanic.DDD.Domain.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\bin\Debug\net6.0\Mechanic.DDD.Domain.pdb
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\refint\Mechanic.DDD.Domain.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\Mechanic.DDD.Domain.pdb
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Domain\obj\Debug\net6.0\ref\Mechanic.DDD.Domain.dll

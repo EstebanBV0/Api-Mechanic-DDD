@@ -1,0 +1,17 @@
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.AssemblyInfo.cs
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Infrastructure.deps.json
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Infrastructure.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Infrastructure.pdb
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Domain.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Domain.pdb
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.csproj.CopyComplete
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\refint\Mechanic.DDD.Infrastructure.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.pdb
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\ref\Mechanic.DDD.Infrastructure.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\bin\Debug\net6.0\Mechanic.DDD.Infrastructure.runtimeconfig.json
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.Infrastructure\obj\Debug\net6.0\Mechanic.DDD.Infrastructure.genruntimeconfig.cache
