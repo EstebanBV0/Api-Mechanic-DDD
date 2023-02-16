@@ -11,9 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{726C12FF-008
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D006B9E6-A777-4762-89D6-DF8A537497E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanic.DDD.Domain", "Mechanic.DDD.Domain\Mechanic.DDD.Domain.csproj", "{FC70A0F7-5233-4FAC-B69E-B24BBBC654B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanic.DDD.Domain", "Mechanic.DDD.Domain\Mechanic.DDD.Domain.csproj", "{FC70A0F7-5233-4FAC-B69E-B24BBBC654B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanic.DDD.Infrastructure", "Mechanic.DDD.Infrastructure\Mechanic.DDD.Infrastructure.csproj", "{FBB9883F-A36B-4480-B605-ADA5D7F6BA54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanic.DDD.Infrastructure", "Mechanic.DDD.Infrastructure\Mechanic.DDD.Infrastructure.csproj", "{FBB9883F-A36B-4480-B605-ADA5D7F6BA54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMechanic", "TestMechanic\TestMechanic.csproj", "{833E3A11-F145-4C4D-B3F8-056CAB235BD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FBB9883F-A36B-4480-B605-ADA5D7F6BA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB9883F-A36B-4480-B605-ADA5D7F6BA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB9883F-A36B-4480-B605-ADA5D7F6BA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833E3A11-F145-4C4D-B3F8-056CAB235BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833E3A11-F145-4C4D-B3F8-056CAB235BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833E3A11-F145-4C4D-B3F8-056CAB235BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833E3A11-F145-4C4D-B3F8-056CAB235BD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

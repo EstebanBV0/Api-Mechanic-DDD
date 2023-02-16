@@ -36,6 +36,11 @@ namespace Mechanic.DDD.api.Controllers
         public  async Task<IActionResult> GetMecanico(int id)
         {
             var response = await mechanicServices.GetMecanico(id);
+            if (response == null)
+            {
+                return NotFound();
+            }
+
             return Ok(response);    
 
         }
