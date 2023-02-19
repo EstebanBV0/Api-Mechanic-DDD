@@ -15,9 +15,12 @@ namespace Mechanic.DDD.Infrastructure
 
     {
         DatabaseContext db;
-        public MecanicoRepository(DatabaseContext db_)
+        private readonly ICacheService _cacheService;
+
+        public MecanicoRepository(DatabaseContext db_, ICacheService cacheService)
         {
             db = db_;
+            _cacheService = cacheService    ;
         }
         public async Task AddMecanico(Mecanico Mecanico)
         {
@@ -41,7 +44,17 @@ namespace Mechanic.DDD.Infrastructure
         public async Task<List<Mecanico>> GetAll()
         {
 
-            return await db.Mecanicos.ToListAsync();
+
+            var cacheData = _cacheService.GetData<List<Mecanico>>("mecanicos");
+            if (cacheData != null)
+            {
+                return cacheData;
+            }
+            var expirationTime = DateTimeOffset.Now.AddMinutes(5.0);
+            cacheData = await db.Mecanicos.ToListAsync();
+            _cacheService.SetData<List<Mecanico>>("mecanicos", cacheData, expirationTime);
+
+            return cacheData;
 
         }
         public async Task<ActionResult>  UpdateMecanico(int Id, Mecanico mecanicoactualizado)

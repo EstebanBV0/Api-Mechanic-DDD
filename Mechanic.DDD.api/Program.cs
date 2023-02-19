@@ -1,6 +1,7 @@
 using Mechanic.DDD.api.AplicationServices;
 using Mechanic.DDD.api.Queries;
 using Mechanic.DDD.api.Utilidades;
+using Mechanic.DDD.Domain.Entities;
 using Mechanic.DDD.Domain.Repositories;
 using Mechanic.DDD.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +17,8 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly, typeof(AutoMapperProfil
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle.3+02-
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<ICacheService, CacheService>();
+
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {

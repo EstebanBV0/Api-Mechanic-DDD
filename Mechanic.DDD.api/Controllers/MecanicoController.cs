@@ -15,12 +15,14 @@ namespace Mechanic.DDD.api.Controllers
     public class MecanicoController : ControllerBase
     {
         private readonly MechanicServices mechanicServices;
+        private readonly IMecanicoRepository mecanicoRepository;
         private readonly IMapper mapper;
 
-        public MecanicoController(MechanicServices mechanicServices,IMapper mapper)
+        public MecanicoController(MechanicServices mechanicServices,IMapper mapper, IMecanicoRepository mecanicoRepository)
         {
             this.mechanicServices = mechanicServices;
             this.mapper = mapper;
+            this.mecanicoRepository = mecanicoRepository;   
         }
         [HttpPost]
         public async Task<IActionResult> AddMecanico([FromBody] MecanicoDTO mecanicoDTO)
@@ -35,7 +37,7 @@ namespace Mechanic.DDD.api.Controllers
         [HttpGet("{id}")]
         public  async Task<IActionResult> GetMecanico(int id)
         {
-            var response = await mechanicServices.GetMecanico(id);
+            var response = await mecanicoRepository.GetMecanicoById(id);
             if (response == null)
             {
                 return NotFound();

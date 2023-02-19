@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Web.Http;
 using Xunit;
 using System.Threading.Tasks;
+using Moq;
 
 namespace TestMechanic
 {
@@ -24,7 +25,8 @@ namespace TestMechanic
         private readonly MechanicServices _mechanicServices;
         private readonly IMapper _mapper;
         private readonly MecanicoQueries _mecanicoQueries;
-        private readonly IMecanicoRepository _mecanicoRepository;
+        private readonly MecanicoRepository mecanicoRepository;
+        private readonly ICacheService _cache;
 
         public UnitTestMecanico()
         {
@@ -39,10 +41,10 @@ namespace TestMechanic
                 IMapper mapper = mappingConfig.CreateMapper();
                 _mapper = mapper;
             }
-            _mecanicoRepository = new MecanicoRepository(db);
-            _mecanicoQueries = new MecanicoQueries(_mecanicoRepository);
-            _mechanicServices = new MechanicServices(_mecanicoRepository, _mecanicoQueries);
-            _mecanicoController = new MecanicoController(_mechanicServices, _mapper);
+            mecanicoRepository = new MecanicoRepository(db, _cache);
+            _mecanicoQueries = new MecanicoQueries(mecanicoRepository);
+            _mechanicServices = new MechanicServices(mecanicoRepository, _mecanicoQueries);
+            _mecanicoController = new MecanicoController(_mechanicServices, _mapper, mecanicoRepository);
         }
 
 
@@ -52,7 +54,7 @@ namespace TestMechanic
         {
             //var Mechcontroller = new MecanicoController(_mechanicServices, _mapper);
             var rest = _mecanicoController.GetMecanicos();
-            var result = _mecanicoRepository.GetAll();
+            var result = mecanicoRepository.GetAll();
     
             //Assert.IsType<List<Mecanico>>(result);
             var expected = typeof(Task<List<Mecanico>>);
@@ -66,14 +68,19 @@ namespace TestMechanic
         [Fact]
         public async Task Get_By_Id_Async()
         {
-        
-            var Mechcontroller = new MecanicoController(_mechanicServices, _mapper);
-            IActionResult response =   await Mechcontroller.GetMecanico(5);
+           
+            var controller = new MecanicoControllerTest(mecanicoRepository);
+            var result = (OkObjectResult)await controller.GetMecanico(5);
 
-            OkObjectResult okResult = response as OkObjectResult;
-            
+            //var mechrepository = new MecanicoRepository(db);
 
-            Assert.IsType<OkObjectResult>(okResult);
+            //var Mechcontroller = new MecanicoController(_mechanicServices, _mapper);
+            //IActionResult response =   await Mechcontroller.GetMecanico(5);
+
+            //OkObjectResult okResult = response as OkObjectResult;
+
+
+            Assert.IsType<OkObjectResult>(result);
 
 
 
