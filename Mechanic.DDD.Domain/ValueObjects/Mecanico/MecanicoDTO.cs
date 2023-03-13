@@ -10,7 +10,6 @@ namespace Mechanic.DDD.Domain.ValueObjects
     public class MecanicoDTO
     {
 
-        public int Id { get; set; }
         public string NivelEstudio { get; set; }
         public string FechaNacimiento { get; set; }
 

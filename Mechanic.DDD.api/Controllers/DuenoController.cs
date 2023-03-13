@@ -7,6 +7,8 @@ using Mechanic.DDD.Domain.ValueObjects;
 using Mechanic.DDD.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using static System.Net.WebRequestMethods;
 
 namespace Mechanic.DDD.api.Controllers
 {
@@ -17,10 +19,13 @@ namespace Mechanic.DDD.api.Controllers
     {
         private readonly IMapper mapper;
         private readonly DuenoServices duenoServices;
-        public DuenoController(IMapper mapper, DuenoServices duenoServices)
+        private readonly DuenoRepository duenoRepository;
+        private readonly ServicioExterno servicioExterno;
+        public DuenoController(IMapper mapper, DuenoServices duenoServices, ServicioExterno servicioExterno)
         {
             this.mapper = mapper;
             this.duenoServices = duenoServices;
+            this.servicioExterno = servicioExterno;
         }
 
         [HttpPost]
@@ -83,6 +88,12 @@ namespace Mechanic.DDD.api.Controllers
 
             return Ok(response);
         }
+        [HttpPatch("{CartUniqueId}")]
+        public async Task<string> Proofpach(string CartUniqueId, [FromBody]  StatusCarrito status)
+        {
+            
+            return await servicioExterno.UpdateStatusShoppingCart(CartUniqueId, status);
+        }       
 
 
     }

@@ -96,3 +96,4 @@ C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.api\bin\Debug\net6.0\C
 C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.api\bin\Debug\net6.0\Moq.dll
 C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.api\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.api\bin\Debug\net6.0\StackExchange.Redis.dll
+C:\Users\esbv1\source\repos\Mechanic.DDD.api\Mechanic.DDD.api\bin\Debug\net6.0\RestSharp.dll

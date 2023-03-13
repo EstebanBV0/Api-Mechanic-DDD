@@ -14,6 +14,8 @@ using System.Web.Http;
 using Xunit;
 using System.Threading.Tasks;
 using Moq;
+using System.Runtime.InteropServices;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestMechanic
 {
@@ -27,10 +29,12 @@ namespace TestMechanic
         private readonly MecanicoQueries _mecanicoQueries;
         private readonly MecanicoRepository mecanicoRepository;
         private readonly ICacheService _cache;
+         IMecanicoRepository _mecanicoRepository;
 
         public UnitTestMecanico()
         {
-         
+     
+
 
             if (_mapper == null)
             {
@@ -67,20 +71,49 @@ namespace TestMechanic
         }
         [Fact]
         public async Task Get_By_Id_Async()
+
         {
-           
-            var controller = new MecanicoControllerTest(mecanicoRepository);
-            var result = (OkObjectResult)await controller.GetMecanico(5);
+            var  mockdbcontext = new Mock<DatabaseContext>();
+            int id = 5;
+            _mecanicoRepository = new MecanicoRepository(mockdbcontext.Object, _cache);
+                int _mecanicoid = 5;
+            Mock<IMecanicoRepository> mecanicrepo = new Mock<IMecanicoRepository>();
+            mecanicrepo.Setup(p => p.GetMecanicoById(_mecanicoid)).ReturnsAsync(new Mecanico()
+            {
+                Id = 5,
+                NivelEstudio = "string",
+                Nombre = "string",
+                Apellido = "string",
+                NumeroTelefono = 0,
+                FechaNacimiento = "string",
+                Correo = "string",
+                Direccion = "string",
+                Cedula = 10,
+                Servicio = null
+            }); ;
+            Mecanico andres = new Mecanico()
+            { 
+                Id = 5,
+                NivelEstudio = "string",
+                Nombre= "string",
+                Apellido= "string",
+                NumeroTelefono = 0,
+                FechaNacimiento = "string",
+                Correo = "string",
+                Direccion = "string",
+                Cedula = 10,
+                 Servicio = null
+            };
+                    var result =   mecanicoRepository.GetMecanicoById(5);
+            var serviciomecanico = new MecanicoQueries(mecanicrepo.Object);
+            Assert.Equal(andres, serviciomecanico.GetMecanicoIdAsync(5).Result);    
 
-            //var mechrepository = new MecanicoRepository(db);
 
-            //var Mechcontroller = new MecanicoController(_mechanicServices, _mapper);
-            //IActionResult response =   await Mechcontroller.GetMecanico(5);
+        //    //    var result = await _mecanicoController.GetMecanico(5);
 
-            //OkObjectResult okResult = response as OkObjectResult;
-
-
-            Assert.IsType<OkObjectResult>(result);
+            //    //    Assert.IsType<IActionResult>(result);
+            //    var rest = _mecanicoController.GetMecanico(5);
+            //    Assert.IsType<Task<List<MecanicoDTO>>>(rest);
 
 
 

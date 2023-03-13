@@ -3,11 +3,14 @@ using Mechanic.DDD.api.Queries;
 using Mechanic.DDD.api.Utilidades;
 using Mechanic.DDD.Domain.Entities;
 using Mechanic.DDD.Domain.Repositories;
+using Mechanic.DDD.Domain;
 using Mechanic.DDD.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 
+
+AppSettings appSettings = new AppSettings();
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +43,18 @@ builder.Services.AddScoped<RepuestoQueries>();
 builder.Services.AddScoped<RepuestoServices>();
 builder.Services.AddScoped<ServicioQueries>();
 builder.Services.AddScoped<ServicioServices>();
+
+
+builder.Services.AddScoped<ServicioExterno>();
+
+builder.Services.AddHttpClient("ShoppingCartService", options =>
+{
+    options.BaseAddress = new Uri("https://pokeapi.co/api/v2/");
+});
+builder.Services.AddHttpClient("PruebaMate", options =>
+{
+    options.BaseAddress = new Uri("https://dev-lpg-njs-back-abandonedshopcart.luegopago.com/abandoned-shoppingcart/");
+});
 
 
 

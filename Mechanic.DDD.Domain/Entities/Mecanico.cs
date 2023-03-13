@@ -15,6 +15,28 @@ namespace Mechanic.DDD.Domain.Entities
         public string FechaNacimiento { get; set; }
         
         public  List<Servicio> Servicio { get; set; }
+        public Mecanico (int id, string nivelEstudio, string nombre , string apellido, int numeroTelefono, string fechaNacimiento, string correo,
+            string direccion, int cedula)
+        {
+            Id = id; 
+            NivelEstudio = nivelEstudio;
+            Nombre = nombre;
+            Apellido = apellido;
+            NumeroTelefono = numeroTelefono;
+            FechaNacimiento = fechaNacimiento;
+            Correo = correo;
+           Direccion = direccion;
+            Cedula = cedula;
+     
+
+
+        }
+        public Mecanico()
+        {
+
+        }
+
+
 
 
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Eynvqhd7/cqvM88os768iWmbslDFkDfoyTCH4hTD4LEWCq3yMqYr2ejNQuw4JRXyH/FEkrwgO5fUPniNqZUBKg==",
+  "dgSpecHash": "NL57YplzxJclMARi2icR8JMI8dVvgUJG91JyHiQZJndWuei9gV5IrZFXjOJ1yycEKSHjZgJs9riGkntOC1OsEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\esbv1\\source\\repos\\Mechanic.DDD.api\\TestMechanic\\TestMechanic.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,7 @@
     "C:\\Users\\esbv1\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\esbv1\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
     "C:\\Users\\esbv1\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.2\\pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
+    "C:\\Users\\esbv1\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
     "C:\\Users\\esbv1\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\esbv1\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\esbv1\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

@@ -13,8 +13,7 @@ namespace Mechanic.DDD.api.Queries
         }
         public async Task<Mecanico> GetMecanicoIdAsync (int id)
         {
-            var response = await mecanicoRepository.GetMecanicoById(id);
-            return response;
+            return await mecanicoRepository.GetMecanicoById(id);
         }
         public async Task <List<Mecanico>> GetMecanicos()
         {

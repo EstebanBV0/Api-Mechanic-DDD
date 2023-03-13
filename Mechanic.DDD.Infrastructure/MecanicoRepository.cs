@@ -30,16 +30,16 @@ namespace Mechanic.DDD.Infrastructure
 
         public async Task<Mecanico> GetMecanicoById(int Id)
         {
-            //var mecanico =  await db.Mecanicos.FirstOrDefaultAsync(x => x.Id == Id);
-            //if (mecanico == null)
-            //{
-            //    return null ;
-            //}
-            //return mecanico;    
-            return  await db.Mecanicos.FirstOrDefaultAsync(x => x.Id == Id);
+            var mecanico = await db.Mecanicos.FirstOrDefaultAsync(x => x.Id == Id);
+            if (mecanico == null)
+            {
+                return null;
+            }
+            return mecanico;
+            //return  await db.Mecanicos.FirstOrDefaultAsync(x => x.Id == Id);
         }
 
-    
+
 
         public async Task<List<Mecanico>> GetAll()
         {
